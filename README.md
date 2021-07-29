@@ -1,4 +1,6 @@
-# Higher Order Array Methods Lab
+# Higher Order Native Array Methods Lab
+
+You've been tasked with building functionality for a music application that wants to allow its users to quickly search and sort through their favorite playlists. Use your knowledge of higher order native array methods to solve this functions.
 
 ## Getting started
 
@@ -16,7 +18,7 @@
 
 ## Instructions
 
-Complete each function inside of the `index.js` file. Use the comments and tests which describe what to do.
+Complete each function inside of the `src/` folder. The comments and tests will help you determine what each function requires.
 
 ### Tests
 
@@ -37,3 +39,33 @@ npm run watch
 ```
 
 Follow the on-screen prompts to exit out of the constant runner.
+
+### Run test files individually
+
+There are a lot of tests that are contained in this lab. You can run a single test file individually by putting the name of the file after `npm test`. You can even only put part of the file name.
+
+```
+npm test 01
+```
+
+### Run tests individually
+
+_After choosing a specific file to run,_ you can also specific which test you want to run, specifically. Add `.only` after either `test` or `describe` for the specific test you'd like to run.
+
+```js
+test.only("should return an array of everyone's name who is in the line, in order", () => {
+```
+
+This will either run the specific `test` or, in the case of adding `.only` to a `describe`, all of the tests for a specific function.
+
+> **NOTE:** Don't forget to remove this after you get the test to pass!
+
+### Run file
+
+If you want to manually test out your file, you can do so by running the following command.
+
+```
+node index.js
+```
+
+The output will be printed to your terminal.
