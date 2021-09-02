@@ -6,9 +6,7 @@ function sortByRuntimeAscending(songs) {
 
 function sortByArtistNameDescending(songs) {
   return songs.sort((song1, song2) => {
-    let song1LowCase = song1.artist.toLowerCase();
-    let song2LowCase = song2.artist.toLowerCase();
-    if(song1LowCase > song2LowCase){
+    if(song1.artist.toLowerCase() > song2.artist.toLowerCase()){
       return -1;
     };
   });
@@ -16,9 +14,7 @@ function sortByArtistNameDescending(songs) {
 
 function sortBySongTitleAscending(songs) {
   return songs.sort((song1, song2) => {
-    let song1LowCase = song1.title.toLowerCase();
-    let song2LowCase = song2.title.toLowerCase();
-    if(song1LowCase < song2LowCase){
+    if(song1.title.toLowerCase() < song2.title.toLowerCase()){
       return -1;
     }; 
   });
