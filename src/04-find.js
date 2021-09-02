@@ -31,7 +31,9 @@ return songs.find(({ runtimeInSeconds }) => runtimeInSeconds < 180)
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object} A single object.
  */
-function findFirstTitleTrack(songs) {}
+function findFirstTitleTrack(songs) {
+  return songs.find(({ title, album }) => title === album)
+}
 
 module.exports = {
   findPinkElephantsByTimestreet,
