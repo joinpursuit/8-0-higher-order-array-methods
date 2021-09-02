@@ -26,8 +26,7 @@ function sortByRuntimeAscending(songs) {
  * @returns {Object[]}
  */
 function sortByArtistNameDescending(songs) {
-  //Based off the mdn page on sort, but it seems like 2/3 outcomes should just result in the object not being shifted
-  return songs.sort((a,b) => a.artist.toUpperCase() > b.artist.toUpperCase()  ? -1: a.artist.toUpperCase() < b.artist.toUpperCase() ? 1:0)
+  return songs.sort((a,b) => a.artist.toUpperCase() > b.artist.toUpperCase()  ? -1:0)
 }
 
 /**
@@ -39,7 +38,7 @@ function sortByArtistNameDescending(songs) {
  * @returns {Object[]}
  */
 function sortBySongTitleAscending(songs) {
-  return songs.sort((a,b) => a.title.toUpperCase() < b.title.toUpperCase()  ? -1: a.title.toUpperCase() > b.title.toUpperCase() ? 1:0)
+  return songs.sort((a,b) => a.title.toUpperCase() < b.title.toUpperCase()  ? -1:0)
 }
 
 module.exports = {
