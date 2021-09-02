@@ -1,9 +1,13 @@
 /*
-  Do not change the line below. If you'd like to run code from this file, you may use the `exampleSongData` variable below to gain access to tickets data. This data is pulled from the `data/songs.js` file.
+  Do not change the line below. If you'd like to run code from this file, you 
+  may use the `exampleSongData` variable below to gain access to tickets data. 
+  This data is pulled from the `data/songs.js` file.
 
-  You may use this data to test your functions. You may assume the shape of the data remains the same but that the values may change.
+  You may use this data to test your functions. You may assume 
+  the shape of the data remains the same but that the values may change.
 
-  Keep in mind that your functions must still have and use a parameter for accepting all songs.
+  Keep in mind that your functions must still have and use a parameter 
+  for accepting all songs.
 */
 const exampleSongData = require("../data/songs");
 // Do not change the line above.
@@ -12,7 +16,11 @@ const exampleSongData = require("../data/songs");
  * Logs out all of the song titles.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  */
-function printAllSongTitles(songs) {}
+function printAllSongTitles(songs) {
+  songs.forEach((song) => {
+    console.log(song.title);
+  }) 
+}
 
 /**
  * Logs out the song title and song artist.
@@ -24,13 +32,26 @@ function printAllSongTitles(songs) {}
  *  //> "Up by Sebastian Kamae"
  *  //> ...
  */
-function printSongDetails(songs) {}
+function printSongDetails(songs) {
+  songs.forEach((song) => console.log(`${song.title} by ${song.artist}`))
+}
 
 /**
  * Logs out all of the song titles which have a runtime over three minutes.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  */
-function printSongTitlesOverThreeMinutes(songs) {}
+function printSongTitlesOverThreeMinutes(songs) {
+  // using forEach native array method (a loop under the hood)
+  // checks every 'song' in 'songs'
+  // one argument: callback that does the operation
+  songs.forEach((song) => {
+    // conditional for which ones to log to the console
+    if (song.runtimeInSeconds > 180) {
+      // if true, print the 'song' 'title'
+      console.log(song.title);
+    }
+  })
+}
 
 module.exports = {
   printAllSongTitles,
