@@ -22,7 +22,9 @@ function allSongsAreOverTwoMinutes(songs) {
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {boolean}
  */
-function anySongIsOverFourMinutes(songs) {}
+function anySongIsOverFourMinutes(songs) {
+  return songs.some(({ runtimeInSeconds }) => runtimeInSeconds > 240)
+}
 
 /**
  * Returns `true` if any song is by the artist "Peanut". Otherwise, return `false`.
