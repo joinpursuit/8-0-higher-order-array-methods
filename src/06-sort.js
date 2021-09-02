@@ -26,7 +26,7 @@ function sortByRuntimeAscending(songs) {
  * @returns {Object[]}
  */
 function sortByArtistNameDescending(songs) {
-  //interesting that strings don't behave like numbers with a single comparison operatior
+  //Based off the mdn page on sort, but it seems like 2/3 outcomes should just result in the object not being shifted
   return songs.sort((a,b) => a.artist.toUpperCase() > b.artist.toUpperCase()  ? -1: a.artist.toUpperCase() < b.artist.toUpperCase() ? 1:0)
 }
 
