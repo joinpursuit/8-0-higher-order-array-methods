@@ -14,8 +14,7 @@ const exampleSongData = require("../data/songs");
  * @returns {Object} A single object.
  */
 function findPinkElephantsByTimestreet(songs) {
-  const found = songs.find(({ title }) => title === "Pink Elephants")
-  return found
+  return songs.find(({ title }) => title === "Pink Elephants")
 }
 
 /**
@@ -23,7 +22,9 @@ function findPinkElephantsByTimestreet(songs) {
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object} A single object.
  */
-function findFirstSongUnderThreeMinutes(songs) {}
+function findFirstSongUnderThreeMinutes(songs) {
+return songs.find(({ runtimeInSeconds }) => runtimeInSeconds < 180)
+}
 
 /**
  * Returns the first song in the list where the song title equals the song album.
