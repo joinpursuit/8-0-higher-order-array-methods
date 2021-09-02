@@ -2,7 +2,7 @@ const exampleSongData = require("../data/songs");
 
 function sortByRuntimeAscending(songs) {
   return songs.sort((song1, song2) => song1.runtimeInSeconds - song2.runtimeInSeconds);
-}
+};
 
 function sortByArtistNameDescending(songs) {
   return songs.sort((song1, song2) => {
@@ -10,7 +10,7 @@ function sortByArtistNameDescending(songs) {
     let song2LowCase = song2.artist.toLowerCase();
     if(song1LowCase > song2LowCase){
       return -1;
-    }
+    };
   });
 };
 
@@ -20,7 +20,7 @@ function sortBySongTitleAscending(songs) {
     let song2LowCase = song2.title.toLowerCase();
     if(song1LowCase < song2LowCase){
       return -1;
-    } 
+    }; 
   });
 };
 
