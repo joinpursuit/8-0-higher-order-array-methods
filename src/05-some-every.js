@@ -6,19 +6,17 @@ function allSongsAreOverTwoMinutes(songs) {
   });
 };
 
-/**
- * Returns `true` if any song is over four minutes. Otherwise, return `false`.
- * @param {Object[]} songs - An array of songs. See the song data for more.
- * @returns {boolean}
- */
-function anySongIsOverFourMinutes(songs) {}
+function anySongIsOverFourMinutes(songs) {
+  return songs.some((song) =>{
+    return song > 240;
+  });
+}
 
-/**
- * Returns `true` if any song is by the artist "Peanut". Otherwise, return `false`.
- * @param {Object[]} songs - An array of songs. See the song data for more.
- * @returns {boolean}
- */
-function anySongIsByPeanut(songs) {}
+function anySongIsByPeanut(songs) {
+  return songs.some((song) =>{
+    return song.artist == "Peanut";
+  });
+};
 
 module.exports = {
   allSongsAreOverTwoMinutes,
