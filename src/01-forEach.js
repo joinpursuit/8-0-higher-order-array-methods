@@ -16,8 +16,6 @@ function printAllSongTitles(songs) {
   songs.forEach((song) => console.log(song.title));
 }
 
-console.log(printAllSongTitles(exampleSongData)); 
-
 /**
  * Logs out the song title and song artist.
  * @param {Object[]} songs - An array of songs. See the song data for more.
@@ -28,7 +26,9 @@ console.log(printAllSongTitles(exampleSongData));
  *  //> "Up by Sebastian Kamae"
  *  //> ...
  */
-function printSongDetails(songs) {}
+function printSongDetails(songs) {
+  songs.forEach((song) => console.log(`${song.title} by ${song.artist}`));
+}
 
 /**
  * Logs out all of the song titles which have a runtime over three minutes.
