@@ -6,6 +6,7 @@
   Keep in mind that your functions must still have and use a parameter for accepting all songs.
 */
 const exampleSongData = require("../data/songs");
+// const convertToMinutes = require()
 // Do not change the line above.
 
 /**
@@ -22,7 +23,14 @@ function findPinkElephantsByTimestreet(songs) {
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object} A single object.
  */
-function findFirstSongUnderThreeMinutes(songs) {}
+//-----Helper Function-----
+ function convertToMinutes (time) {
+  return time / 60
+}
+
+function findFirstSongUnderThreeMinutes(songs) {
+  return songs.find((song) => convertToMinutes(song.runtimeInSeconds) < 3);
+};
 
 /**
  * Returns the first song in the list where the song title equals the song album.
