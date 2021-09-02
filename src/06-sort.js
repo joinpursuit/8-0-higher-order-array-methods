@@ -11,7 +11,6 @@ function sortByArtistNameDescending(songs) {
     if(song1LowCase > song2LowCase){
       return -1;
     }
-      return 0;
   });
 };
 
@@ -21,11 +20,7 @@ function sortBySongTitleAscending(songs) {
     let song2LowCase = song2.title.toLowerCase();
     if(song1LowCase < song2LowCase){
       return -1;
-    } else if(song1LowCase > song2LowCase){
-      return 1;
-    } else {
-      return 0;
-    };
+    } 
   });
 };
 
