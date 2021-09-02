@@ -14,7 +14,7 @@ const exampleSongData = require("../data/songs");
  */
 function printAllSongTitles(songs) {
   songs.forEach(song => console.log(song.title))
-}on printAllSongTitles(songs) {}
+}
 
 /**
  * Logs out the song title and song artist.
