@@ -11,9 +11,6 @@ function sortByArtistNameDescending(songs) {
     if(song1LowCase > song2LowCase){
       return -1;
     }
-    if(song1LowCase < song2LowCase){
-      return 1;
-    } 
       return 0;
   });
 };

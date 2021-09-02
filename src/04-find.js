@@ -18,8 +18,8 @@ function findFirstSongUnderThreeMinutes(songs) {
 
 function findFirstTitleTrack(songs) {  
   return songs.find((song) => {
-  if (song.title == song.album){
-    return song;
+    if (song.title == song.album){
+     return song;
   };
 });
 };
