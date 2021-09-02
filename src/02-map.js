@@ -47,7 +47,7 @@ function getSongDetails(songs) {
  */
 function getTitleAndArtist(songs) {
   let result = songs.map(obj => {
-    return obj.title=obj.artist
+    return {[obj.title]:obj.artist}
   })
   return result
 }

@@ -15,7 +15,7 @@ const exampleSongData = require("../data/songs");
  */
 function allSongsAreOverTwoMinutes(songs) {
  let result = songs.every(song => {
-    song > 120
+    return song.runtimeInSeconds > 120
   })
   return result 
 }
@@ -27,7 +27,7 @@ function allSongsAreOverTwoMinutes(songs) {
  */
 function anySongIsOverFourMinutes(songs) {
   let result = songs.some(song =>{
-    song>240
+    return song.runtimeInSeconds>240
   })
   return result
 }
@@ -39,7 +39,7 @@ function anySongIsOverFourMinutes(songs) {
  */
 function anySongIsByPeanut(songs) {
   let result = songs.some(obj =>{
-     obj === "Peanut"
+     return obj.artist === "Peanut"
   })
   return result
 }
