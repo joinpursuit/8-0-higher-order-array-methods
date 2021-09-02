@@ -13,21 +13,43 @@ const exampleSongData = require("../data/songs");
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]} An array of objects.
  */
-function getSongsBySaib(songs) {}
+function getSongsBySaib(songs) {
+  return songs.filter((song) => {
+    if (song.artist === "Saib") {
+      return song
+    }
+  })
+}
 
 /**
  * Returns an array of all songs where the runtime is over three minutes.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]} An array of objects.
  */
-function getSongsOverThreeMinutes(songs) {}
+//----Helper Function----
+function convertToMinutes (time) {
+  return time / 60
+}
+function getSongsOverThreeMinutes(songs) {
+  return songs.filter((song) => {
+    if (convertToMinutes(song.runtimeInSeconds) > 3) {
+      return song
+    }
+  })
+}
 
 /**
  * Returns an array of songs where the song title is the same as the song album.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]} An array of objects.
  */
-function getTitleTracks(songs) {}
+function getTitleTracks(songs) {
+  return songs.filter((song) => {
+    if (song.title === song.album) {
+      return song
+    }
+  })
+}
 
 module.exports = {
   getSongsBySaib,
