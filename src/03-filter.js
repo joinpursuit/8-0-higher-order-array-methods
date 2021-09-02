@@ -26,7 +26,18 @@ function getSongsBySaib(songs) {
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]} An array of objects.
  */
-function getSongsOverThreeMinutes(songs) {}
+//----Helper Function----
+function convertToMinutes (time) {
+  return time / 60
+}
+
+function getSongsOverThreeMinutes(songs) {
+  return songs.filter((song) => {
+    if (convertToMinutes(song.runtimeInSeconds) > 3) {
+      return song
+    };
+  });
+};
 
 /**
  * Returns an array of songs where the song title is the same as the song album.
