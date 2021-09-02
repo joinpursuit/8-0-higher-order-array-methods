@@ -28,7 +28,9 @@ function printAllSongTitles(songs) {
  *  //> "Up by Sebastian Kamae"
  *  //> ...
  */
-function printSongDetails(songs) {}
+function printSongDetails(songs) {
+  songs.forEach(({title, artist}) => console.log(`${title} by ${artist}`))
+}
 
 /**
  * Logs out all of the song titles which have a runtime over three minutes.
