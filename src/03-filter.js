@@ -18,7 +18,7 @@ function getSongsBySaib(songs) {
   return songs.filter( ({artist}) => artist === 'Saib' )
 }
 
-console.log(getSongsBySaib(exampleSongData));
+// console.log(getSongsBySaib(exampleSongData));
 /**
  * Returns an array of all songs where the runtime is over three minutes.
  * @param {Object[]} songs - An array of songs. See the song data for more.

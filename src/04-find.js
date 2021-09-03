@@ -19,7 +19,7 @@ function findPinkElephantsByTimestreet(songs) {
 
 /**
  * Returns the first song in the list that is under three minutes.
- * @param {Object[]} songs - An array of songs. See the song data for more.
+ * @param {Object[]} songs - An array of songs. Seenp the song data for more.
  * @returns {Object} A single object.
  */
 function findFirstSongUnderThreeMinutes(songs) {
