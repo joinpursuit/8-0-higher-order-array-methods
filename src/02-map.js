@@ -7,13 +7,20 @@
 */
 const exampleSongData = require("../data/songs");
 // Do not change the line above.
-
+const log = console.log;
 /**
  * Returns an array of all of the song titles.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {string[]} An array of strings, all of which are song titles.
  */
-function getSongTitles(songs) {}
+function getSongTitles(songs) {
+  //Declare an array
+  let songTitle = []
+  //fetches all song titles
+  songs.map((song) => songTitle.push(song.title)) 
+  return songTitle  
+  }
+
 
 /**
  * Returns an array of all of the song titles with the artist.
@@ -27,7 +34,8 @@ function getSongTitles(songs) {}
 function getSongDetails(songs) {}
 
 /**
- * Returns an array of objects, where each object has a key that is the song title and has a value that is the song artist.
+ * Returns an array of objects, where each object has a key that is the 
+ * song title and has a value that is the song artist.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]} An array of objects.
  *
@@ -36,6 +44,13 @@ function getSongDetails(songs) {}
  *  //> [ { "Berlin Tsukin": "Taiyo Ky" }, { Up: "Sebastian Kamae" }, ... ]
  */
 function getTitleAndArtist(songs) {}
+
+
+// if (result[planet]) {
+//   result[planet].push(name);
+// } else {
+//   result[planet] = [name];
+// }
 
 module.exports = {
   getSongTitles,
