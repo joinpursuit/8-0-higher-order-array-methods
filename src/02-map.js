@@ -15,12 +15,13 @@ const log = console.log;
  */
 function getSongTitles(songs) {
   //Declare an array
-  let songTitle = []
-  //fetches all song titles
-  songs.map((song) => songTitle.push(song.title)) 
-  return songTitle  
-  }
+  let songTitle = [];
 
+  //fetches all song titles
+  songs.map((song) => songTitle.push(song.title));
+
+  return songTitle;
+}
 
 /**
  * Returns an array of all of the song titles with the artist.
@@ -33,14 +34,18 @@ function getSongTitles(songs) {
  */
 function getSongDetails(songs) {
   //Declare an array
-  let titleSong = []
+  let titleSong = [];
+
   //fetches song title and the artist from a song object
-  songs.map((songTitle) => titleSong.push(`${songTitle.title} by ${songTitle.artist}`))
-  return titleSong 
+  songs.map((songTitle) =>
+
+    titleSong.push(`${songTitle.title} by ${songTitle.artist}`)
+  );
+  return titleSong;
 }
 
 /**
- * Returns an array of objects, where each object has a key that is the 
+ * Returns an array of objects, where each object has a key that is the
  * song title and has a value that is the song artist.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]} An array of objects.
@@ -49,8 +54,16 @@ function getSongDetails(songs) {
  *  getTitleAndArtist(songs);
  *  //> [ { "Berlin Tsukin": "Taiyo Ky" }, { Up: "Sebastian Kamae" }, ... ]
  */
-function getTitleAndArtist(songs) {}
+function getTitleAndArtist(songs) {
+  //returns 
+  return songs.map((song) => {
+    let titleArtist = {};
+    //populates array objects, song title been the key while artist the value
+    titleArtist[song.title] = song.artist;
 
+    return titleArtist;
+  });
+}
 
 // if (result[planet]) {
 //   result[planet].push(name);
