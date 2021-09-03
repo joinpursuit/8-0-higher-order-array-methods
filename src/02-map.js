@@ -17,7 +17,7 @@ function getSongTitles(songs) {
   return songs.map( ({title}) => title); 
 } 
 
-console.log(getSongTitles(exampleSongData));
+// console.log(getSongTitles(exampleSongData));
 
 /**
  * Returns an array of all of the song titles with the artist.
@@ -32,7 +32,7 @@ function getSongDetails(songs) {
   return songs.map( ({title, artist}) => `${title} by ${artist}`)
 }
 
-console.log(getSongDetails(exampleSongData));
+// console.log(getSongDetails(exampleSongData));
 
 /**
  * Returns an array of objects, where each object has a key that is the song title and has a value that is the song artist.
@@ -47,7 +47,7 @@ function getTitleAndArtist(songs) {
   return songs.map( ({title,artist}) => ({[`${title}`]: `${artist}`}));
 }
 
-console.log(getTitleAndArtist(exampleSongData));
+// console.log(getTitleAndArtist(exampleSongData));
 
 module.exports = {
   getSongTitles,
