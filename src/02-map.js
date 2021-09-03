@@ -80,9 +80,7 @@ const songs = [
 function getSongTitles(songs) {
   const titles = songs.map(song=>{
     return song.title;
-  })
-
-//console.log(titles)
+  });
 return titles;
 }
 /**
