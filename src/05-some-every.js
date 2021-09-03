@@ -7,14 +7,14 @@
 */
 const exampleSongData = require("../data/songs");
 // Do not change the line above.
-
+  
 /**
  * Returns `true` if every song is over two minutes. Otherwise, return `false`.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {boolean}
  */
 function allSongsAreOverTwoMinutes(songs) {}
-
+     
 /**
  * Returns `true` if any song is over four minutes. Otherwise, return `false`.
  * @param {Object[]} songs - An array of songs. See the song data for more.
@@ -28,7 +28,7 @@ function anySongIsOverFourMinutes(songs) {}
  * @returns {boolean}
  */
 function anySongIsByPeanut(songs) {}
-
+ 
 module.exports = {
   allSongsAreOverTwoMinutes,
   anySongIsOverFourMinutes,
