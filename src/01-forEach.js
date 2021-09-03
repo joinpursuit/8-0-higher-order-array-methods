@@ -31,6 +31,8 @@ songs.forEach((songTitle) => console.log(songTitle.title))
  *  //> ...
  */
 function printSongDetails(songs) {
+  //for each song object the callback function fetches the song title and the artist who sings the song
+  songs.forEach((songTitle) => console.log(`${songTitle.title} by ${songTitle.artist}`))
 }
 
 /**
