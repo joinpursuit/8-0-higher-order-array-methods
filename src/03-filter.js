@@ -22,7 +22,7 @@ const log = console.log;
 // }
 
 function getSongsBySaib(songs) {
-  //Return true for all songs sang by 'Saib
+  //Returns all songs sang by 'Saib
  return songs.filter((song) => song.artist === "Saib");
 }
 
@@ -33,7 +33,10 @@ function getSongsBySaib(songs) {
  * the song data for more.
  * @returns {Object[]} An array of objects.
  */
-function getSongsOverThreeMinutes(songs) {}
+function getSongsOverThreeMinutes(songs) {
+  // Returns all songs whose play time is > 180
+  return songs.filter((song) => song.runtimeInSeconds > 180)
+}
 
 /**
  * Returns an array of songs where the song title is 
