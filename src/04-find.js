@@ -37,7 +37,10 @@ function findFirstSongUnderThreeMinutes(songs) {
  * for more.
  * @returns {Object} A single object.
  */
-function findFirstTitleTrack(songs) {}
+function findFirstTitleTrack(songs) {
+  //Returns the song whose title is the same as the album's
+  return songs.find((song) => song.title === song.album)
+}
 
 module.exports = {
   findPinkElephantsByTimestreet,
