@@ -14,7 +14,9 @@ const exampleSongData = require("../data/songs");
  * @returns {boolean}
  */
 function allSongsAreOverTwoMinutes(songs) {
-  return songs.every(element => element.runtimeInSeconds > 120)
+  return songs.every(element => {
+    element.runtimeInSeconds > 120
+  })
 }
 
 /**
@@ -23,7 +25,9 @@ function allSongsAreOverTwoMinutes(songs) {
  * @returns {boolean}
  */
 function anySongIsOverFourMinutes(songs) {
-  return songs.some(element => element.runtimeInSeconds > 240)
+  return songs.some(element => {
+    element.runtimeInSeconds > 240
+  })
 }
 
 /**
