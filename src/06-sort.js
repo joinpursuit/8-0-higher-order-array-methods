@@ -38,7 +38,7 @@ function sortByArtistNameDescending(songs) {
     }
   });
 }
-6 - 3 ===  ( 0 > 0)
+//6 - 3 ===  ( 0 > 0)
 /**
  * Reorders the array so that the song objects are organized by their song title.
  * The title that comes first in the alphabet should come first.
