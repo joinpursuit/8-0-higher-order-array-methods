@@ -19,6 +19,12 @@ const exampleSongData = require("../data/songs");
  * @returns {Object} A single object.
  */
 function findPinkElephantsByTimestreet(songs) {
+  // refactored: one line, anonymous arrow callback function, 
+  // implicit return inside the callback, no need for curly braces
+
+  // returns the 1st object that meets the condition right of '=>'
+  // no need for 'if' statements when using comparison operators
+  // they can evaluate to booleans by themselves
   return songs.find((song) => song.title === "Pink Elephants");
 }
 
@@ -28,6 +34,12 @@ function findPinkElephantsByTimestreet(songs) {
  * @returns {Object} A single object.
  */
 function findFirstSongUnderThreeMinutes(songs) {
+  // refactored: one line, anonymous arrow callback function, 
+  // implicit return inside the callback, no need for curly braces
+
+  // returns the 1st object that meets the condition right of '=>'
+  // no need for 'if' statements when using comparison operators
+  // they can evaluate to booleans by themselves
   return songs.find((song) => song.runtimeInSeconds < 180);
 }
 
@@ -37,6 +49,12 @@ function findFirstSongUnderThreeMinutes(songs) {
  * @returns {Object} A single object.
  */
 function findFirstTitleTrack(songs) {
+  // refactored: one line, anonymous arrow callback function, 
+  // implicit return inside the callback, no need for curly braces
+
+  // returns the 1st object that meets the condition right of '=>'
+  // no need for 'if' statements when using comparison operators
+  // they can evaluate to booleans by themselves
   return songs.find((song) => song.title === song.album);
 }
 

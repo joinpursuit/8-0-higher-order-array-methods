@@ -14,6 +14,13 @@ const exampleSongData = require("../data/songs");
  * @returns {boolean}
  */
 function allSongsAreOverTwoMinutes(songs) {
+  // refactored: one line, anonymous arrow callback function, 
+  // implicit return inside the callback, no need for curly braces
+
+  // checks if 'every'/all 'runtimeInSeconds' meet the condition
+  // after the conditional, boolean: true/false is returned
+  // *no need for 'if' statements when using comparison operators
+  // they can evaluate to booleans by themselves*
   return songs.every((song) => song.runtimeInSeconds > 120);
 }
 
@@ -23,6 +30,11 @@ function allSongsAreOverTwoMinutes(songs) {
  * @returns {boolean}
  */
 function anySongIsOverFourMinutes(songs) {
+  // refactored: one line, anonymous arrow callback function, 
+  // implicit return inside the callback, no need for curly braces
+
+  // checks if at least one things meets the condition
+  // after the conditional, boolean: true/false is returned
   return songs.some((song) => song.runtimeInSeconds > 240);
 }
 
@@ -32,6 +44,11 @@ function anySongIsOverFourMinutes(songs) {
  * @returns {boolean}
  */
 function anySongIsByPeanut(songs) {
+  // refactored: one line, anonymous arrow callback function, 
+  // implicit return inside the callback, no need for curly braces
+
+  // checks if at least one things meets the condition
+  // after the conditional, boolean: true/false is returned
   return songs.some((song) => song.artist === "Peanut");
 }
 

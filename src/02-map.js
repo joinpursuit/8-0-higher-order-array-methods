@@ -18,6 +18,13 @@ const exampleSongData = require("../data/songs");
  * @returns {string[]} An array of strings, all of which are song titles.
  */
 function getSongTitles(songs) {
+  // refactored: one line, anonymous arrow callback function, 
+  // implicit return with console.log, no need for curly braces
+
+  // .map method takes in an anonymous arrow callback function
+  // returns each 'song's title from 'songs' array in a new array 👇🏼
+  // anonymous array //> since we're not storing 'songs.map()' in 
+  // a variable, instead 'return'ing the result right away
   return songs.map((song) => song.title);
 }
 
@@ -32,6 +39,13 @@ function getSongTitles(songs) {
  *  //> [ "Berlin Tsukin by Taiyo Ky", "Up by Sebastian Kamae", ... ]
  */
 function getSongDetails(songs) {
+  // refactored: one line, anonymous arrow callback function, 
+  // implicit return with console.log, no need for curly braces
+
+  // .map method takes in an anonymous arrow callback function
+  // returns each 'song's title and artist from 'songs' array in a new array 👇🏼
+  // anonymous array //> since we're not storing 'songs.map()' in 
+  // a variable, instead 'return'ing the result right away
   return songs.map((song) => `${song.title} by ${song.artist}`);
 }
 
@@ -46,9 +60,15 @@ function getSongDetails(songs) {
  *  //> [ { "Berlin Tsukin": "Taiyo Ky" }, { Up: "Sebastian Kamae" }, ... ]
  */
 function getTitleAndArtist(songs) {
+  // opposite of the one line function
+  // store the evaluated result of map in a variable, which is 
+  // also the name of the new array .map will return at the end
   const arrOfObj = songs.map((song) => {
+    // returns an object with title as the key and artist as the value into 'arrOfObj' array
+    // directly put key and value into the object, for JS to read 'song.title' put it in square brackets []
     return { [song.title]: song.artist };
   })
+  // return 'arrOfObj' new array resulting from .map
   return arrOfObj;
 }
 

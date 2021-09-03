@@ -15,6 +15,9 @@ const exampleSongData = require("../data/songs");
  * @returns {Object[]}
  */
 function sortByRuntimeAscending(songs) {
+  // sorts the original data by taking in a callback, that compares two elements at a time
+  // if a - b returns less than 0 (a negative number), 2nd element (b) goes after the 1st one (a) 
+  // if a - b returns greater than 0 (a positive number), 1nd element (a) goes after the 2nd one (b) 
   return songs.sort((a, b) => a.runtimeInSeconds - b.runtimeInSeconds);
 }
 
@@ -29,6 +32,9 @@ function sortByRuntimeAscending(songs) {
  * @returns {Object[]}
  */
 function sortByArtistNameDescending(songs) {
+  // sorts the original data by taking in a callback, that compares two elements at a time
+  // return a negative number //> 2nd element (b) goes after the 1st one (a) 
+  // return a positive number //>, 1nd element (a) goes after the 2nd one (b)
   return songs.sort((a, b) => {
    if (a.artist.toLowerCase() > b.artist.toLowerCase()) {
      return -1;
@@ -46,6 +52,9 @@ function sortByArtistNameDescending(songs) {
  * @returns {Object[]}
  */
 function sortBySongTitleAscending(songs) {
+  // sorts the original data by taking in a callback, that compares two elements at a time
+  // return a negative number //> 2nd element (b) goes after the 1st one (a) 
+  // return a positive number //>, 1nd element (a) goes after the 2nd one (b)
   return songs.sort((element1, element2) => {
     if (element1.title.toLowerCase() < element2.title.toLowerCase()) {
       return -1;

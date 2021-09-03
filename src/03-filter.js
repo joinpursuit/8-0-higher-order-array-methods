@@ -15,7 +15,9 @@ const exampleSongData = require("../data/songs");
  */
 function getSongsBySaib(songs) {
   // refactored: removed function expression, returned without setting it equal to a variable
-  // implicit return: removed curly braces and return, inside the callback
+  // implicit return inside the callback, removed curly braces and 'return'
+  // filters based a conditional right side of the '=>' 
+  // returns a new array of objects based on which ones evaluate to 'true'
   return songs.filter((song) => song.artist === "Saib");
 }
 
@@ -25,6 +27,10 @@ function getSongsBySaib(songs) {
  * @returns {Object[]} An array of objects.
  */
 function getSongsOverThreeMinutes(songs) {
+  // refactored: removed function expression, returned without setting it equal to a variable
+  // implicit return inside the callback, removed curly braces and 'return'
+  // filters based a conditional right side of the '=>' 
+  // returns a new array of objects based on which ones evaluate to 'true'
   return songs.filter((song) => song.runtimeInSeconds > 180);
 }
 
@@ -34,6 +40,10 @@ function getSongsOverThreeMinutes(songs) {
  * @returns {Object[]} An array of objects.
  */
 function getTitleTracks(songs) {
+  // refactored: removed function expression, returned without setting it equal to a variable
+  // implicit return inside the callback, removed curly braces and 'return'
+  // filters based a conditional right side of the '=>' 
+  // returns a new array of objects based on which ones evaluate to 'true'
   return songs.filter((song) => song.title === song.album);
 }
 

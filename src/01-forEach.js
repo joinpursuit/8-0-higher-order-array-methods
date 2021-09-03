@@ -17,9 +17,11 @@ const exampleSongData = require("../data/songs");
  * @param {Object[]} songs - An array of songs. See the song data for more.
  */
 function printAllSongTitles(songs) {
+  // refactored: one line, anonymous arrow callback function, implicit return with console.log, no need for curly braces
+  // for each 'song' in 'songs', it prints song's title
   songs.forEach((song) => console.log(song.title));
 }
-
+printAllSongTitles(exampleSongData);
 /**
  * Logs out the song title and song artist.
  * @param {Object[]} songs - An array of songs. See the song data for more.
@@ -31,6 +33,8 @@ function printAllSongTitles(songs) {
  *  //> ...
  */
 function printSongDetails(songs) {
+  // refactored: one line, anonymous arrow callback function, implicit return with console.log, no need for curly braces
+  // for each 'song' in 'songs', it prints song's title and artist using an interpolated string
   songs.forEach((song) => console.log(`${song.title} by ${song.artist}`))
 }
 
@@ -41,11 +45,11 @@ function printSongDetails(songs) {
 function printSongTitlesOverThreeMinutes(songs) {
   // using forEach native array method (a loop under the hood)
   // checks every 'song' in 'songs'
-  // one argument: callback that does the operation
+  // one argument: anonymous arrow callback function that does the operation
   songs.forEach((song) => {
     // conditional for which ones to log to the console
     if (song.runtimeInSeconds > 180) {
-      // if true, print the 'song' 'title'
+      // if true, prints the song's title
       console.log(song.title);
     }
   })
