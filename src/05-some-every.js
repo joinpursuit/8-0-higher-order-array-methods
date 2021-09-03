@@ -13,21 +13,39 @@ const exampleSongData = require("../data/songs");
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {boolean}
  */
-function allSongsAreOverTwoMinutes(songs) {}
+function allSongsAreOverTwoMinutes(songs) {
+  let allSongsOverTwoMin = songs.every(song => {
+    return song.runtimeInSeconds > 120;
+  });
+  return allSongsOverTwoMin;
+  // return songs.every(song => song.runtimeInSeconds > 120); // One-liner
+}
 
 /**
  * Returns `true` if any song is over four minutes. Otherwise, return `false`.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {boolean}
  */
-function anySongIsOverFourMinutes(songs) {}
+function anySongIsOverFourMinutes(songs) {
+  let anySongOverFourMins = songs.some(song => {
+    return song.runtimeInSeconds > 240;
+  });
+  return anySongOverFourMins;
+  // return songs.some(song => song.runtimeInSeconds > 240); // One-liner
+}
 
 /**
  * Returns `true` if any song is by the artist "Peanut". Otherwise, return `false`.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {boolean}
  */
-function anySongIsByPeanut(songs) {}
+function anySongIsByPeanut(songs) {
+  let peanutSong = songs.some(song => {
+    return song.artist === 'Peanut';
+  });
+  return peanutSong;
+  // return songs.some(song => song.artist === 'Peanut'); // One-liner
+}
 
 module.exports = {
   allSongsAreOverTwoMinutes,
