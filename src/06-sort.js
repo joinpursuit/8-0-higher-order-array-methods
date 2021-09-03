@@ -14,9 +14,7 @@ const exampleSongData = require("../data/songs");
  * @returns {Object[]}
  */
 function sortByRuntimeAscending(songs) {
-  return songs.sort((a , b) => {
-    return a.runtimeInSeconds - b.runtimeInSeconds
-  })
+  return songs.sort((a , b) => a.runtimeInSeconds - b.runtimeInSeconds)
 }
 
 /**
