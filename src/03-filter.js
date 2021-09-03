@@ -5,7 +5,7 @@
 
   Keep in mind that your functions must still have and use a parameter for accepting all songs.
 */
-import exampleSongData from "../data/songs";
+const exampleSongData = require("../data/songs");
 // Do not change the line above.
 
 /**
@@ -36,7 +36,7 @@ function getTitleTracks(songs) {
   return songs.filter(({ title, album }) => title === album)
 }
 
-export default {
+module.exports = {
   getSongsBySaib,
   getSongsOverThreeMinutes,
   getTitleTracks,
