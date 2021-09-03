@@ -17,7 +17,6 @@ function allSongsAreOverTwoMinutes(songs) {
   let answer = songs.every(el => (el.runtimeInSeconds > 120) ? true : false);
   return answer
 }
-//testing error 
 
 /**
  * Returns `true` if any song is over four minutes. Otherwise, return `false`.
