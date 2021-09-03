@@ -7,7 +7,7 @@
 */
 const exampleSongData = require("../data/songs");
 // Do not change the line above.
-
+const log = console.log
 /**
  * Reorders the array so that the song objects are organized by their runtime.
  * The shortest song should come first.
@@ -31,14 +31,14 @@ function sortByRuntimeAscending(songs) {
  * @returns {Object[]}
  */
 function sortByArtistNameDescending(songs) {
-  //Sorts songs by artist name in ascending order (case-sensitive)
+  //Sorts songs by artist name in Descending order (case-sensitive)
   return songs.sort((latest, first) => {
     if (latest.artist.toLowerCase() > first.artist.toLowerCase()) {
       return -1;
     }
   });
 }
-
+6 - 3 ===  ( 0 > 0)
 /**
  * Reorders the array so that the song objects are organized by their song title.
  * The title that comes first in the alphabet should come first.
@@ -50,16 +50,17 @@ function sortByArtistNameDescending(songs) {
  * @returns {Object[]}
  */
 function sortBySongTitleAscending(songs) {
-    //Sorts songs by artist name in descending order (case-sensitive)
+    //Sorts songs by artist name in Ascending order (case-sensitive)
   return songs.sort((latest, first) => {
     if (latest.title.toLowerCase() < first.title.toLowerCase()) {
       return -1;
     }
   });
 }
-
+ //sort.sortByRuntimeAscending(['2','3','5','6','7'])
 module.exports = {
   sortByRuntimeAscending,
   sortByArtistNameDescending,
   sortBySongTitleAscending,
 };
+
