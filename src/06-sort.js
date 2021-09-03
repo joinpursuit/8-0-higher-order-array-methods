@@ -30,7 +30,14 @@ function sortByRuntimeAscending(songs) {
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]}
  */
-function sortByArtistNameDescending(songs) {}
+function sortByArtistNameDescending(songs) {
+  //Sorts songs by artist name 
+  return songs.sort((latest, first) => {
+    if (latest.artist.toLowerCase() > first.artist.toLowerCase()) {
+      return -1;
+    }
+  });
+}
 
 /**
  * Reorders the array so that the song objects are organized by their song title.
