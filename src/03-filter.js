@@ -45,7 +45,10 @@ function getSongsOverThreeMinutes(songs) {
  * data for more.
  * @returns {Object[]} An array of objects.
  */
-function getTitleTracks(songs) {}
+function getTitleTracks(songs) {
+  //Returns song whose title is the same as the album title
+  return songs.filter((song) => song.title === song.album)
+}
 
 module.exports = {
   getSongsBySaib,
