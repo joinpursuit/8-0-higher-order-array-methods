@@ -26,10 +26,7 @@ function allSongsAreOverTwoMinutes(songs) {
  * @returns {boolean}
  */
 function anySongIsOverFourMinutes(songs) {
-  const overFour = songs.some((song)=>{
-    song.runtimeInSeconds > 240
-  });
-  return overFour;
+   return songs.some(song=> song.runtimeInSeconds > 240);
 }
 
 /**
@@ -38,10 +35,7 @@ function anySongIsOverFourMinutes(songs) {
  * @returns {boolean}
  */
 function anySongIsByPeanut(songs) {
-  const anyPeanut = songs.some((song)=>{
-    song.artist === "Peanut"
-  });
-  return !anyPeanut; 
+  return songs.some(song => song.artist === "Peanut");
 }
 
 module.exports = {
