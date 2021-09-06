@@ -1,9 +1,15 @@
 /*
-  Do not change the line below. If you'd like to run code from this file, you may use the `exampleSongData` variable below to gain access to tickets data. This data is pulled from the `data/songs.js` file.
+  Do not change the line below. If you'd like to run code from this file, 
+  you may use the `exampleSongData` 
+  variable below to gain access to tickets data. 
+  This data is pulled from the `data/songs.js` file.
 
-  You may use this data to test your functions. You may assume the shape of the data remains the same but that the values may change.
+  You may use this data to test your functions. 
+  You may assume the shape of the data remains the same 
+  but that the values may change.
 
-  Keep in mind that your functions must still have and use a parameter for accepting all songs.
+  Keep in mind that your functions must still have and use a parameter 
+  for accepting all songs.
 */
 const exampleSongData = require("../data/songs");
 // Do not change the line above.
@@ -13,21 +19,44 @@ const exampleSongData = require("../data/songs");
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object} A single object.
  */
-function findPinkElephantsByTimestreet(songs) {}
+function findPinkElephantsByTimestreet(songs) {
+  let newArr = songs.find((el) => {
+    if (el.title === 'Pink Elephants') {
+          return el.title
+    };
+  });
+  return newArr;
+}
+//console.log(findPinkElephantsByTimestreet(exampleSongData));
 
 /**
  * Returns the first song in the list that is under three minutes.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object} A single object.
  */
-function findFirstSongUnderThreeMinutes(songs) {}
-
+function findFirstSongUnderThreeMinutes(songs) {
+  let newArr = songs.find((el) => {
+    if (el.runtimeInSeconds < 180) {
+      return el.title;
+    }
+  });
+  return newArr;
+}
+//console.log(findFirstSongUnderThreeMinutes(exampleSongData));
 /**
  * Returns the first song in the list where the song title equals the song album.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object} A single object.
  */
-function findFirstTitleTrack(songs) {}
+function findFirstTitleTrack(songs) {
+  let newArr = songs.find((el) => {
+    if (el.title === el.album) {
+      return el.title;
+    };
+  });
+  return newArr;
+}
+//console.log(findFirstTitleTrack(exampleSongData));
 
 module.exports = {
   findPinkElephantsByTimestreet,
