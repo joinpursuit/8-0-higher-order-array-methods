@@ -35,7 +35,13 @@ function anySongIsOverFourMinutes(songs) {
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {boolean}
  */
-function anySongIsByPeanut(songs) { }
+function anySongIsByPeanut(songs) { 
+
+let doesPeanutExist = songs.some(song => song.artist === "Peanut")
+return doesPeanutExist
+
+
+}
 
 module.exports = {
   allSongsAreOverTwoMinutes,

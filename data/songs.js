@@ -15,7 +15,7 @@ const songs = [
     title: "Daylight",
     album: "Bluewerks Vol. 1: Up Down Left Right",
     artist: "hiyasu",
-    runtimeInSeconds: 154,
+   runtimeInSeconds : 154,
   },
   {
     title: "Dormancy",
