@@ -1,9 +1,14 @@
 /*
-  Do not change the line below. If you'd like to run code from this file, you may use the `exampleSongData` variable below to gain access to tickets data. This data is pulled from the `data/songs.js` file.
+  Do not change the line below. 
+  If you'd like to run code from this file, 
+  you may use the `exampleSongData` variable below to gain access to tickets data. 
+  This data is pulled from the `data/songs.js` file.
 
-  You may use this data to test your functions. You may assume the shape of the data remains the same but that the values may change.
+  You may use this data to test your functions. 
+  You may assume the shape of the data remains the same but that the values may change.
 
-  Keep in mind that your functions must still have and use a parameter for accepting all songs.
+  Keep in mind that your functions must still have 
+  and use a parameter for accepting all songs.
 */
 const exampleSongData = require("../data/songs");
 // Do not change the line above.
@@ -14,12 +19,13 @@ const exampleSongData = require("../data/songs");
  * See the song data for more.
  */
 function printAllSongTitles(songs) {
-  songs.forEach((songs) => {
+  let newArr = songs.forEach((songs) => {
     console.log(songs.title);
   });
-  
-}
-//console.log(printAllSongTitles(songs));
+  return newArr;
+};
+//console.log(printAllSongTitles(exampleSongData));
+
 
 /**
  * Logs out the song title and song artist.
@@ -32,22 +38,26 @@ function printAllSongTitles(songs) {
  *  //> ...
  */
 function printSongDetails(songs) {
-  songs.forEach((element) => {
+  let newArr = songs.forEach((element) => {
     console.log(`${element.title} by ${element.artist}`);
   });
-}
+  return newArr;
+};
+//console.log(printSongDetails(exampleSongData));
 
 /**
  * Logs out all of the song titles which have a runtime over three minutes.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  */
 function printSongTitlesOverThreeMinutes(songs) {
-  songs.forEach((element) => {
+  let newArr = songs.forEach((element) => {
     if (element.runtimeInSeconds > 180) {
       console.log(element.title);
     }
   });
-}
+  return newArr;
+};
+//console.log(printSongTitlesOverThreeMinutes(exampleSongData));
 
 module.exports = {
   printAllSongTitles,

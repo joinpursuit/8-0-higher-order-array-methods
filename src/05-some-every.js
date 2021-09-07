@@ -31,7 +31,7 @@ function allSongsAreOverTwoMinutes(songs) {
     }
   });
   return newArr;
-}
+};
 //console.log(allSongsAreOverTwoMinutes(exampleSongData));
 
 /**
@@ -48,7 +48,7 @@ function anySongIsOverFourMinutes(songs) {
     };
   });
   return newArr;
-}
+};
 //console.log(anySongIsOverFourMinutes(exampleSongData));
 /**
  * Returns `true` if any song is by the artist "Peanut". Otherwise, return `false`.
@@ -64,7 +64,7 @@ function anySongIsByPeanut(songs) {
     }
   });
   return newArr;
-}
+};
 //console.log(anySongIsByPeanut(exampleSongData));
 
 module.exports = {

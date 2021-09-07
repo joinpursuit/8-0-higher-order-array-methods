@@ -21,12 +21,10 @@ const exampleSongData = require("../data/songs");
  * @returns {Object[]}
  */
 function sortByRuntimeAscending(songs) {
-  songs.sort((a, b) => {
+  return songs.sort((a, b) => {
     return a.runtimeInSeconds - b.runtimeInSeconds;
-    });
-  console.log(songs.runtimeInSeconds) 
-}
-//console.log(songs)
+});
+};
 //console.log(sortByRuntimeAscending(exampleSongData));
 
 /**
@@ -40,15 +38,17 @@ function sortByRuntimeAscending(songs) {
  * @returns {Object[]}
  */
 function sortByArtistNameDescending(songs) {
-    songs.sort((a, b) => {
-    if (b.artist.toLowerCase() > a.artist.toLowerCase()) {
+    return songs.sort((a, b) => {
+    if (a.artist.toLowerCase() < b.artist.toLowerCase()) {
       return 1;
-    } else {
+    } else if (a.artist.toLowerCase() > b.artist.toLowerCase()) {
       return -1;
+    } else {
+      return 0;
     }
   });
-  console.log(songs)
-}
+};
+//console.log(sortByArtistNameDescending(exampleSongData));
 
 
 /**
@@ -59,7 +59,20 @@ function sortByArtistNameDescending(songs) {
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]}
  */
-function sortBySongTitleAscending(songs) {}
+function sortBySongTitleAscending(songs) {
+    return songs.sort((a, b) => {
+      if (a.title.toLowerCase() > b.title.toLowerCase()) {
+        return 1;
+      } else if (a.title.toLowerCase() < b.title.toLowerCase()) {
+        return -1;
+      } else {
+        return 0;
+      }
+
+    });
+};
+//console.log(sortBySongTitleAscending(exampleSongData));
+
 
 module.exports = {
   sortByRuntimeAscending,

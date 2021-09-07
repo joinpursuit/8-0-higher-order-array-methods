@@ -26,7 +26,7 @@ function getSongsBySaib(songs) {
      }
   });
   return newArr;
-}
+};
 //console.log(getSongsBySaib(exampleSongData));
 /**
  * Returns an array of all songs where the runtime is over three minutes.
@@ -40,7 +40,7 @@ function getSongsOverThreeMinutes(songs) {
      }
   });
   return newArr;
-}
+};
 //console.log(getSongsOverThreeMinutes(exampleSongData));
 
 /**
@@ -55,8 +55,8 @@ function getTitleTracks(songs) {
     };
   });
   return newArr;
-}
-console.log(getTitleTracks(exampleSongData));
+};
+//console.log(getTitleTracks(exampleSongData));
 
 module.exports = {
   getSongsBySaib,

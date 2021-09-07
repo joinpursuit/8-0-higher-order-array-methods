@@ -20,14 +20,22 @@ const exampleSongData = require("../data/songs");
  * @returns {Object} A single object.
  */
 function findPinkElephantsByTimestreet(songs) {
-  let newArr = songs.find((el) => {
+let newArr = songs.find((el) => {
     if (el.title === 'Pink Elephants') {
           return el.title
     };
   });
   return newArr;
-}
+};
 //console.log(findPinkElephantsByTimestreet(exampleSongData));
+
+
+// let newArr = songs.find((el) => el.title === 'Pink Elephants');
+// return newArr;
+//   }
+//   console.log(findPinkElephantsByTimestreet(exampleSongData));
+
+
 
 /**
  * Returns the first song in the list that is under three minutes.
@@ -41,7 +49,7 @@ function findFirstSongUnderThreeMinutes(songs) {
     }
   });
   return newArr;
-}
+};
 //console.log(findFirstSongUnderThreeMinutes(exampleSongData));
 /**
  * Returns the first song in the list where the song title equals the song album.
@@ -55,7 +63,7 @@ function findFirstTitleTrack(songs) {
     };
   });
   return newArr;
-}
+};
 //console.log(findFirstTitleTrack(exampleSongData));
 
 module.exports = {
