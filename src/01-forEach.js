@@ -93,7 +93,7 @@ function printAllSongTitles(songs) {
 function printSongDetails(songs) {
   songs.forEach(song=>{
     console.log(song.title +" by "+song.artist)
-  })
+  });
 }
 //printSongDetails(songs)
 /**
