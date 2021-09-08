@@ -13,8 +13,18 @@ const exampleSongData = require("../data/songs");
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {string[]} An array of strings, all of which are song titles.
  */
-function getSongTitles(songs) {}
+function getSongTitles(songs) {
+  let newArr = songs.map((song) =>{
+    return song.title;
+  })
+     // let newArr = arr.map(obj=>{
+    // return { name:"Super" + obj.name, age: obj.age}
+  
+  
 
+   return newArr;
+}
+ 
 /**
  * Returns an array of all of the song titles with the artist.
  * @param {Object[]} songs - An array of songs. See the song data for more.
@@ -24,7 +34,13 @@ function getSongTitles(songs) {}
  *  getSongDetails(songs);
  *  //> [ "Berlin Tsukin by Taiyo Ky", "Up by Sebastian Kamae", ... ]
  */
-function getSongDetails(songs) {}
+function getSongDetails(songs) {
+  let newArr = songs.map((song)=>{
+    return song.title + " by " + song.artist 
+  });
+
+  return newArr;
+}
 
 /**
  * Returns an array of objects, where each object has a key that is the song title and has a value that is the song artist.
@@ -35,7 +51,14 @@ function getSongDetails(songs) {}
  *  getTitleAndArtist(songs);
  *  //> [ { "Berlin Tsukin": "Taiyo Ky" }, { Up: "Sebastian Kamae" }, ... ]
  */
-function getTitleAndArtist(songs) {}
+function getTitleAndArtist(songs) {
+  let newArrObj = songs.map((song)=>{
+    let obj = {}
+    obj[song.title] = song.artist
+    return obj;
+  })
+  return newArrObj;
+}
 
 module.exports = {
   getSongTitles,
