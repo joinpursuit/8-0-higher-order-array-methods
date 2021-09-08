@@ -6,6 +6,7 @@
   Keep in mind that your functions must still have and use a parameter for accepting all songs.
 */
 const exampleSongData = require("../data/songs");
+const { getSongTitles } = require("./02-map");
 // Do not change the line above.
 
 /**
@@ -13,21 +14,30 @@ const exampleSongData = require("../data/songs");
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]} An array of objects.
  */
-function getSongsBySaib(songs) {}
+function getSongsBySaib(songs) {
+  let newArr = songs.filter(song => song.artist === "Saib")
+  return newArr 
+}
 
 /**
  * Returns an array of all songs where the runtime is over three minutes.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]} An array of objects.
  */
-function getSongsOverThreeMinutes(songs) {}
+function getSongsOverThreeMinutes(songs) {
+  let newArr = songs.filter(song => song.runtimeInSeconds>180 )
+  return newArr
+}
 
 /**
  * Returns an array of songs where the song title is the same as the song album.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]} An array of objects.
  */
-function getTitleTracks(songs) {}
+function getTitleTracks(songs) {
+  let newArr = songs.filter(song=>song.title.includes(song.album))
+  return newArr
+}
 
 module.exports = {
   getSongsBySaib,
