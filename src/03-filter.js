@@ -24,7 +24,7 @@ function getSongsBySaib(songs) {
  * @returns {Object[]} An array of objects.
  */
 function getSongsOverThreeMinutes(songs) {
-  return songs.filter(({ runtimeInSeconds}) => runtimeInSeconds > 180)
+  return songs.filter(({ runtimeInSeconds }) => runtimeInSeconds > 180)
 }
 
 /**
