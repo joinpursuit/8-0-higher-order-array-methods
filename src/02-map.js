@@ -41,9 +41,9 @@ function getSongDetails(songs) {
  */
 function getTitleAndArtist(songs) {
   return songs.map((song) => {
-    return ({
+    return {
       [song.title]: song.artist,
-    });
+    };
   });
 }
 
