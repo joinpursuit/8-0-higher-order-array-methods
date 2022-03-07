@@ -37,7 +37,7 @@ function getSongTitles(songs) {
 function getSongDetails(songs) {
   let songTitles = [];
   songs.map(song => {
-    songTitles.push(song.title && song.artist)
+    songTitles.push(`${song.title} by ${song.artist}`)
   });
        
   return songTitles
@@ -52,7 +52,11 @@ function getSongDetails(songs) {
  *  getTitleAndArtist(songs);
  *  //> [ { "Berlin Tsukin": "Taiyo Ky" }, { Up: "Sebastian Kamae" }, ... ]
  */
-function getTitleAndArtist(songs) {}
+function getTitleAndArtist(songs) {
+  let songTitles= songs.map(song => ( { [song.title] : song.artist }  ) ) 
+return songTitles
+}
+//{key3: "value3"}
 
 module.exports = {
   getSongTitles,
