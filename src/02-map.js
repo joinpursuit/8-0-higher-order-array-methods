@@ -41,7 +41,7 @@ function getSongDetails(songs) {
  */
 function getTitleAndArtist(songs) {
   let songObj = {};
-  return songs.map(song => songObj = {[song.title] : song.artist });
+  return songs.map(song => songObj = { [song.title] : song.artist } );
 }
 
 module.exports = {
