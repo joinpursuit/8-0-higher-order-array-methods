@@ -14,7 +14,7 @@ const exampleSongData = require("../data/songs");
  * @returns {Object[]} An array of objects.
  */
 function getSongsBySaib(songs) {
-  return songs.filter((song) => song.artist.includes('Saib'))
+  return songs.filter(song => song.artist.includes('Saib'))
 }
 
 /**
@@ -23,7 +23,7 @@ function getSongsBySaib(songs) {
  * @returns {Object[]} An array of objects.
  */
 function getSongsOverThreeMinutes(songs) {
-  return songs.filter((song) => song.runtimeInSeconds > 180)
+  return songs.filter(song => song.runtimeInSeconds > 180)
 }
 
 /**
@@ -32,7 +32,7 @@ function getSongsOverThreeMinutes(songs) {
  * @returns {Object[]} An array of objects.
  */
 function getTitleTracks(songs) {
-  return songs.filter((song) => song.title === song.album )
+  return songs.filter(song => song.title === song.album )
 }
 
 module.exports = {
