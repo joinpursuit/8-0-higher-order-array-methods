@@ -13,7 +13,11 @@ const exampleSongData = require("../data/songs");
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]}
  */
-function sortByRuntimeAscending(songs) {}
+function sortByRuntimeAscending(songs) {
+  return songs.sort((songA, songB) => {
+    return songA.runtimeInSeconds - songB.runtimeInSeconds;
+  });
+}
 
 /**
  * Reorders the array so that the song objects are organized by their artist name. The artist that comes last in the alphabet should come first.
@@ -23,7 +27,20 @@ function sortByRuntimeAscending(songs) {}
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]}
  */
-function sortByArtistNameDescending(songs) {}
+function sortByArtistNameDescending(songs) {
+  return songs.sort((songA, songB) => {
+    let songAArtistName = songA.artist.toLowerCase(); //name of song A artist
+    let songBArtistName = songB.artist.toLowerCase(); //name of song B artist
+    //sort in the descending order
+    if (songAArtistName < songBArtistName) {
+      return 1; //sort songB before songA
+    } else if (songAArtistName > songBArtistName) {
+      return -1; //sort songA before songB
+    } else {
+      return 0;
+    }
+  });
+}
 
 /**
  * Reorders the array so that the song objects are organized by their song title. The title that comes first in the alphabet should come first.
@@ -33,7 +50,20 @@ function sortByArtistNameDescending(songs) {}
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]}
  */
-function sortBySongTitleAscending(songs) {}
+function sortBySongTitleAscending(songs) {
+  return songs.sort((songA, songB) => {
+    let songATitle = songA.title.toLowerCase(); //song A title
+    let songBTitle = songB.title.toLowerCase(); //song B title
+    //sort in the ascending order
+    if (songATitle < songBTitle) {
+      return -1; //sort songA before songB
+    } else if (songATitle > songBTitle) {
+      return 1; //sort songB before songA
+    } else {
+      return 0;
+    }
+  });
+}
 
 module.exports = {
   sortByRuntimeAscending,
