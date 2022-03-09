@@ -28,8 +28,17 @@ function sortByRuntimeAscending(songs) {
  * @returns {Object[]}
  */
 function sortByArtistNameDescending(songs) {
-  let sortList= songs.map((song)=> song.title.toLowerCase())
-  return sortList.sort()
+  //let sortList= songs.map((song)=> song.title.toLowerCase())
+  songs.sort((song1, song2)=>{
+    let first=0;
+    if(song1.artist.toLowerCase() > song2.artist.toLowerCase()){
+      first= -1;
+    } else {
+      first= 0;
+    }
+    return first;
+  })
+  return songs;
 }
 
 /**
@@ -41,7 +50,16 @@ function sortByArtistNameDescending(songs) {
  * @returns {Object[]}
  */
 function sortBySongTitleAscending(songs) {
-
+  songs.sort((song1, song2)=>{
+    let first=0;
+    if(song1.title.toLowerCase() < song2.title.toLowerCase()){
+      first= -1;
+    } else {
+      first= 1;
+    }
+    return first;
+  })
+  return songs;
 }
 
 module.exports = {
