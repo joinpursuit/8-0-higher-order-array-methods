@@ -13,6 +13,7 @@ const exampleSongData = require("../data/songs");
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {boolean}
  */
+
 function allSongsAreOverTwoMinutes(songs) {
   return songs.every(song => song.runtimeInSeconds > 120);
 }
