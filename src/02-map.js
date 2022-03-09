@@ -30,6 +30,7 @@ function getSongTitles(songs) {
  *  getSongDetails(songs);
  *  //> [ "Berlin Tsukin by Taiyo Ky", "Up by Sebastian Kamae", ... ]
  */
+
 function getSongDetails(songs) {
   return songs.map((song) => {
     return `${song.title} by ${song.artist}`;
