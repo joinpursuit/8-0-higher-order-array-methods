@@ -13,7 +13,18 @@ const exampleSongData = require("../data/songs");
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]}
  */
-function sortByRuntimeAscending(songs) {}
+function sortByRuntimeAscending(songs) {
+  songs.sort((currentSong, nextSong) => {
+    if (currentSong.runtimeInSeconds < nextSong.runtimeInSeconds) {
+      return -1;
+    } else if (currentSong.runtimeInSeconds > nextSong.runtimeInSeconds) {
+      return 1;
+    } else {
+      return 0;
+    }
+  });
+  return songs;
+}
 
 /**
  * Reorders the array so that the song objects are organized by their artist name. The artist that comes last in the alphabet should come first.
@@ -23,7 +34,19 @@ function sortByRuntimeAscending(songs) {}
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]}
  */
-function sortByArtistNameDescending(songs) {}
+function sortByArtistNameDescending(songs) {
+  return songs.sort((currentSong, nextSong) => {
+    let currentArtist = currentSong.artist.toLowerCase();
+    let nextArtist = nextSong.artist.toLowerCase();
+    if (currentArtist < nextArtist) {
+      return 1;
+    } else if (currentArtist > nextArtist) {
+      return -1;
+    } else {
+      return 0;
+    }
+  });
+}
 
 /**
  * Reorders the array so that the song objects are organized by their song title. The title that comes first in the alphabet should come first.
@@ -33,7 +56,19 @@ function sortByArtistNameDescending(songs) {}
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]}
  */
-function sortBySongTitleAscending(songs) {}
+function sortBySongTitleAscending(songs) {
+  return songs.sort((currentSong, nextSong) => {
+    let currentTitle = currentSong.title.toLowerCase();
+    let nextTitle = nextSong.title.toLowerCase();
+    if (currentTitle < nextTitle) {
+      return -1;
+    } else if (currentTitle > nextTitle) {
+      return 1;
+    } else {
+      return 0;
+    }
+  });
+}
 
 module.exports = {
   sortByRuntimeAscending,
