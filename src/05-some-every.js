@@ -5,7 +5,7 @@
 
   Keep in mind that your functions must still have and use a parameter for accepting all songs.
 */
-const exampleSongData = require("../data/songs");
+const exampleSongData = require('../data/songs');
 // Do not change the line above.
 
 /**
@@ -13,21 +13,36 @@ const exampleSongData = require("../data/songs");
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {boolean}
  */
-function allSongsAreOverTwoMinutes(songs) {}
+function allSongsAreOverTwoMinutes(songs) {
+  const allOver2Min = songs.every((song) => {
+    song.runtimeInSeconds / 60 > 2;
+  });
+  return allOver2Min;
+}
 
 /**
  * Returns `true` if any song is over four minutes. Otherwise, return `false`.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {boolean}
  */
-function anySongIsOverFourMinutes(songs) {}
+function anySongIsOverFourMinutes(songs) {
+  const atleatsOneOver4Min = songs.some((song) => {
+    song.runtimeInSeconds / 60 > 4;
+  });
+  return atleatsOneOver4Min;
+}
 
 /**
  * Returns `true` if any song is by the artist "Peanut". Otherwise, return `false`.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {boolean}
  */
-function anySongIsByPeanut(songs) {}
+function anySongIsByPeanut(songs) {
+  const peanutArtistFound = songs.some((song) => {
+    return song.artist === 'Peanut' ? true : false;
+  });
+  return peanutArtistFound;
+}
 
 module.exports = {
   allSongsAreOverTwoMinutes,
