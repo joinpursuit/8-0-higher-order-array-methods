@@ -42,7 +42,13 @@ return  songs.sort((a,b) => {
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]}
  */
-function sortBySongTitleAscending(songs) {}
+function sortBySongTitleAscending(songs) {
+  return  songs.sort((a, b) => {
+    if (a.title.toUpperCase() < b.title.toUpperCase()) {
+      return -1
+    }
+  })
+}
 
 module.exports = {
   sortByRuntimeAscending,
