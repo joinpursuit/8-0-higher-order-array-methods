@@ -28,9 +28,9 @@ function sortByRuntimeAscending(songs) {
  * @returns {Object[]}
  */
 function sortByArtistNameDescending(songs) {
-  return songs.sort((B,A) => B.title -  A.title)
+  return songs.sort((a,b) => b.artist - a.artist)
 }
-
+// const sortByArtistNameDescending = songs.sort((a, b) => (b.artist - a.artist));
 /**
  * Reorders the array so that the song objects are organized by their song title. The title that comes first in the alphabet should come first.
  *
@@ -39,7 +39,9 @@ function sortByArtistNameDescending(songs) {
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]}
  */
-function sortBySongTitleAscending(songs) {}
+function sortBySongTitleAscending(songs) {
+  return songs.sort((a,b) => a.title - b.title)
+}
 
 module.exports = {
   sortByRuntimeAscending,
