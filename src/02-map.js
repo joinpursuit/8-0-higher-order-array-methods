@@ -14,8 +14,9 @@ const exampleSongData = require("../data/songs");
  * @returns {string[]} An array of strings, all of which are song titles.
  */
 function getSongTitles(songs) {
-  let arr = [];
-  arr.push(getSongTitles)
+  let arr = songs.map((song) => {
+    return song.title
+  });
   return arr
 }
 
