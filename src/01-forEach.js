@@ -38,6 +38,17 @@ function printSongTitlesOverThreeMinutes(songs) {
   songs.forEach(song => song.runtimeInSeconds > 180 ? console.log(song.title) : null)
 }
 
+//Zane's example
+// function printSongTitlesOverThreeMinutes(songs) {
+//   function over180(song) {
+//     if (song.runtimeInSeconds > 180){
+//       console.log(song.title)
+//     }
+//   }
+//   songs.forEach(song => over180(song))
+// }
+
+
 module.exports = {
   printAllSongTitles,
   printSongDetails,
