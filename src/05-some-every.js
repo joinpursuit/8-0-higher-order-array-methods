@@ -13,21 +13,55 @@ const exampleSongData = require("../data/songs");
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {boolean}
  */
-function allSongsAreOverTwoMinutes(songs) {}
+
+//creates a function to get all songs over two minutes with the parameter songs which is an array 
+function allSongsAreOverTwoMinutes(songs) {
+  //using the every method on the array songs to check every iteration and return 
+  return songs.every((song) => {
+    //songs over two minutes if the conditional statement is true 
+    //iteration through array run time in seconds is over 3minutes return true
+    song.runtimeInSeconds > 180
+      
+    }
+)
+}
+  
+
 
 /**
  * Returns `true` if any song is over four minutes. Otherwise, return `false`.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {boolean}
  */
-function anySongIsOverFourMinutes(songs) {}
+//creates a function of any song is over four minutes with the parameter songs which is an array
+function anySongIsOverFourMinutes(songs) {
+  //using the some method on the array songs iterate through the array and return 
+  return songs.some((song) => {
+    //songs over four minutes if the conditional statement is true
+    // iterations of runtimeInSeconds is greater than 4 minutes return true
+
+    song.runtimeInSeconds > 240
+
+    }
+    
+  )
+}
 
 /**
  * Returns `true` if any song is by the artist "Peanut". Otherwise, return `false`.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {boolean}
  */
-function anySongIsByPeanut(songs) {}
+
+//creates a function of any song by the artist Peanut with the parameter songs which is an array
+function anySongIsByPeanut(songs) {
+  //using the some method to iterate through the array song
+  return songs.some((song) => 
+  //if iteration of song artist by "Peanut" is true 
+    song.artist === "Peanut"
+    
+  )
+}
 
 module.exports = {
   allSongsAreOverTwoMinutes,
