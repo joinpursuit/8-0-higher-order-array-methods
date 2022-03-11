@@ -5,14 +5,27 @@
 
   Keep in mind that your functions must still have and use a parameter for accepting all songs.
 */
-const exampleSongData = require("../data/songs");
+const songs = require('../data/songs');
+const exampleSongData = require('../data/songs');
 // Do not change the line above.
 
 /**
  * Logs out all of the song titles.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  */
-function printAllSongTitles(songs) {}
+function printAllSongTitles(songs) {
+  songs.forEach((song) => {
+    console.log(song.title);
+  });
+}
+/*let songlist = [];
+  songs.forEach(function (songs, index) {
+    songlist[index] = {}
+    songlist[index].title = songs;
+    songlist[index].titlemsg = printAllSongTitles(songs)
+  });
+  console.log(songlist);
+songs.forEach(printAllSongTitles()); */
 
 /**
  * Logs out the song title and song artist.
@@ -24,13 +37,23 @@ function printAllSongTitles(songs) {}
  *  //> "Up by Sebastian Kamae"
  *  //> ...
  */
-function printSongDetails(songs) {}
+function printSongDetails(songs) {
+  songs.forEach((song) => {
+    console.log(`${song.title} by ${song.artist}`);
+  });
+}
 
 /**
  * Logs out all of the song titles which have a runtime over three minutes.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  */
-function printSongTitlesOverThreeMinutes(songs) {}
+function printSongTitlesOverThreeMinutes(songs) {
+  songs.forEach((song) => {
+    if (song.runtimeInSeconds > 180) {
+      console.log(`${song.title}`);
+    }
+  });
+}
 
 module.exports = {
   printAllSongTitles,
