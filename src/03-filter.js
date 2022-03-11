@@ -31,7 +31,9 @@ function getSongsOverThreeMinutes(songs) {
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]} An array of objects.
  */
-function getTitleTracks(songs) {}
+function getTitleTracks(songs) {
+  return songs.filter((song) => song.title === song.album
+  )}
 
 module.exports = {
   getSongsBySaib,
