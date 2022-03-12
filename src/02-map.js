@@ -36,7 +36,7 @@ const exampleSongData = require("../data/songs");
  *  getTitleAndArtist(songs);
  *  //> [ { "Berlin Tsukin": "Taiyo Ky" }, { Up: "Sebastian Kamae" }, ... ]
  */
- const getTitleAndArtist = (songs) => songs.map((song) => Object=`{${song.title}: ${song.artist}}`);
+ const getTitleAndArtist = (songs) => songs.map(song => ({ [song.title] : song.artist} ));
 
 module.exports = {
   getSongTitles,

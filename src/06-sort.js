@@ -25,7 +25,7 @@ const exampleSongData = require("../data/songs");
  * @returns {Object[]}
  */
  function sortByArtistNameDescending(songs) {
-  return songs.sort((a, b) => {
+  return songs.sort((a, b) => { 
     if (a.artist.toUpperCase() > b.artist.toUpperCase()) {
       return -1;
     }
