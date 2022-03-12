@@ -28,9 +28,11 @@ function sortByRuntimeAscending(songs) {
  * @returns {Object[]}
  */
 function sortByArtistNameDescending(songs) {
-  return songs.sort((a , b) => {
-    if(a.artist > b.artist) return 1;
-    return -1;
+  return songs.sort((song1, song2) => {
+    const str1 = song1.artist.toUpperCase()
+    const str2 = song2.artist.toUpperCase()
+    
+    return str2.localeCompare(str1);
   });
 };
 
