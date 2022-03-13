@@ -30,10 +30,21 @@ const sortByRuntimeAscending = (songs) => songs.sort((a,b) => a.runtimeInSeconds
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]}
  */
-function sortByArtistNameDescending(songs) {
-  return songs.sort((a,b) => b.artist - a.artist)
-}
+// function sortByArtistNameDescending(songs) {
+//   return songs.sort((a,b) => b.artist - a.artist)
+// }
+//create a function to sort artist name by descending order with the parameter songs which is an array
+const sortByArtistNameDescending = (songs) =>{
+  //using the sort method returns the comparison of iteration a (start) and iteration b(end)
+  return songs.sort((a,b) => {
+    //conditional statement if start iteration in uppper case form is greater than end iteration in upper case form
+    if(a.artist.toUpperCase() > b.artist.toUpperCase()){
+      //return negative 1 and put that one first
+      return -1
+    }
+  }) 
 
+}
 
 // const sortByArtistNameDescending = songs.sort((a, b) => {
 //   if (a.artist < b.artist)return -1;
@@ -60,7 +71,7 @@ const sortBySongTitleAscending = (songs) => {
 return songs.sort((el1, el2) => {
   //if element 1 in songs iterarion title in lower case form is less than element 2 in lower case form 
   if (el1.title.toLowerCase() < el2.title.toLowerCase()){
-    //return -1
+    //return -1 and put that element first
     return -1;
   }
 })
