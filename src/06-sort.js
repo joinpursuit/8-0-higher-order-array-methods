@@ -14,10 +14,13 @@ const exampleSongData = require("../data/songs");
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]}
  */
-function sortByRuntimeAscending(songs) {
+// function sortByRuntimeAscending(songs) {
 
-  return songs.sort((a,b) => a.runtimeInSeconds - b.runtimeInSeconds)
-}
+  // return songs.sort((a,b) => a.runtimeInSeconds - b.runtimeInSeconds)
+// 
+
+const sortByRuntimeAscending = (songs) => songs.sort((a,b) => a.runtimeInSeconds - b.runtimeInSeconds
+)
 
 /**
  * Reorders the array so that the song objects are organized by their artist name. The artist that comes last in the alphabet should come first.
@@ -30,7 +33,15 @@ function sortByRuntimeAscending(songs) {
 function sortByArtistNameDescending(songs) {
   return songs.sort((a,b) => b.artist - a.artist)
 }
-// const sortByArtistNameDescending = songs.sort((a, b) => (b.artist - a.artist));
+
+
+// const sortByArtistNameDescending = songs.sort((a, b) => {
+//   if (a.artist < b.artist)return -1;
+//     return 1;
+// });
+
+
+
 /**
  * Reorders the array so that the song objects are organized by their song title. The title that comes first in the alphabet should come first.
  *
@@ -39,9 +50,25 @@ function sortByArtistNameDescending(songs) {
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]}
  */
-function sortBySongTitleAscending(songs) {
-  return songs.sort((a,b) => a.title - b.title)
+// function sortBySongTitleAscending(songs) {
+//   return songs.sort((a,b) => a.title - b.title)
+// }
+
+//create a funtion to sort songs by title in ascending order (alphabetical order) with the parameter songs which is an array
+const sortBySongTitleAscending = (songs) => { 
+  //using the .sort method and element 1 and element 2 as start and end point return the following 
+return songs.sort((el1, el2) => {
+  //if element 1 in songs iterarion title in lower case form is less than element 2 in lower case form 
+  if (el1.title.toLowerCase() < el2.title.toLowerCase()){
+    //return -1
+    return -1;
+  }
+})
+
+
 }
+
+
 
 module.exports = {
   sortByRuntimeAscending,
